@@ -58,6 +58,7 @@ public class MessageListener implements UpdatesListener {
                 bot.execute(new SendMessage(chatId, "Second number is : " + text).replyMarkup(replyKeyboardMarkup));
                 session.setP2(Long.parseLong(text));
                 bot.execute(new SendMessage(chatId, "Result : " + session.calc()));
+                MAP.remove(chatId);
             }
         }
     }
